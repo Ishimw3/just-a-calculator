@@ -1,38 +1,79 @@
+body {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
 .container {
-    width: 400px;
-    height: 600px;
-    border: 1px solid gray;
-    background-color: ghostwhite;
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    border: 1px solid #333;
+    background: linear-gradient(145deg, #2a2a2a, #1a1a1a);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     margin: auto;
     justify-content: space-between;
-    border-radius: 5px;
+    border-radius: 15px;
+    padding: 20px;
 }
 
 .row {
     display: flex;
     justify-content: space-between;
-    padding: 10px;
-    height: 100%;
+    padding: 10px 0;
+    height: auto;
 }
 
 button {
-    width: 100%;
-    height: 100%;
-    margin: 10px;
+    width: 22%;
+    height: 60px;
+    margin: 5px;
     cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #3a3a3a, #2a2a2a);
+    color: #f0f0f0;
+    font-size: 1.2em;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:active {
+    background: linear-gradient(145deg, #2a2a2a, #3a3a3a);
+    transform: scale(0.95);
 }
 
 .screen {
-    margin: 10px;
-    border: 2px solid black;
-    height: 100%;
+    margin: 10px 0;
+    border: 2px solid #333;
+    height: auto;
     border-radius: 10px;
     padding: 15px;
+    background: #1a1a1a;
+    box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.screen h1 {
+.screen h1, .screen h3 {
     text-align: end;
-    
+    margin: 0;
+    color: #00ff99;
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    button {
+        width: 22%;
+        height: 50px;
+        font-size: 1em;
+    }
 }
